@@ -33,10 +33,10 @@ function AccountCard({
 
   return (
     <Card.Root
-      width="100%"
-      maxWidth="400px"
+      flexDirection="row"
+      overflow="hidden"
+      maxW="xl"
       variant="elevated"
-      alignContent={"end"}
     >
       <Card.Header>
         <HStack>
@@ -59,8 +59,8 @@ function AccountCard({
           ${balance.toLocaleString()}
         </Text>
       </Card.Body>
-      <Card.Footer>
-        <Button colorScheme="blue" size="sm" backgroundColor={"blue.600"} p={2}>
+      <Card.Footer alignItems="center">
+        <Button colorScheme="blue" size="sm" mt="5">
           View Transactions
         </Button>
       </Card.Footer>
