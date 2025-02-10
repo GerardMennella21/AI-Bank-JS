@@ -1,14 +1,6 @@
-import {
-  Button,
-  Card,
-  Heading,
-  HStack,
-  Icon,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Card, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { FaPiggyBank, FaWallet } from "react-icons/fa";
+import { BiCreditCardAlt, BiMoneyWithdraw, BiWallet } from "react-icons/bi";
 interface AccountCardProps {
   name: string;
   balance: number;
@@ -25,9 +17,11 @@ function AccountCard({
   function getAccountIcon() {
     switch (type) {
       case "savings":
-        return FaPiggyBank;
+        return BiMoneyWithdraw;
+      case "credit":
+        return BiCreditCardAlt;
       default:
-        return FaWallet;
+        return BiWallet;
     }
   }
 
@@ -35,7 +29,8 @@ function AccountCard({
     <Card.Root
       flexDirection="row"
       overflow="hidden"
-      maxW="xl"
+      width="100%"
+      maxW="4xl"
       variant="elevated"
     >
       <Card.Header>
@@ -51,19 +46,14 @@ function AccountCard({
           </VStack>
         </HStack>
       </Card.Header>
-      <Card.Body>
-        <Text fontSize="sm" color="gray.500">
-          {type === "credit" ? "Credit Balance" : "Available Balance"}
-        </Text>
+      <Card.Body textAlign="end">
         <Text fontSize="2xl" fontWeight="bold">
           ${balance.toLocaleString()}
         </Text>
+        <Text fontSize="sm" color="gray.500">
+          {type === "credit" ? "Credit Balance" : "Available Balance"}
+        </Text>
       </Card.Body>
-      <Card.Footer alignItems="center">
-        <Button colorScheme="blue" size="sm" mt="5">
-          View Transactions
-        </Button>
-      </Card.Footer>
     </Card.Root>
   );
 }

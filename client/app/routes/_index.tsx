@@ -40,7 +40,7 @@ export default function Index() {
       <Heading as="h1" size="xl" mb={6}>
         Account Dashboard
       </Heading>
-      <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
+      <Grid templateColumns="1fr" justifyItems="center" gap={6}>
         {accounts.map((account) => (
           <AccountCard
             key={account.id}
