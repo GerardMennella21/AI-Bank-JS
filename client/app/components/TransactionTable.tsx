@@ -1,15 +1,9 @@
 import { Table } from "@chakra-ui/react";
-
-interface Transction {
-  id: number;
-  date: string;
-  description: string;
-  amount: number;
-  type: string;
-}
+import { Transaction } from "~/data/transactions";
+import formatCurrency from "~/util/formatCurrency";
 
 interface TransactionTableProps {
-  transactions: Array<Transction>;
+  transactions: Array<Transaction>;
 }
 
 function TransactionTable({ transactions }: TransactionTableProps) {
@@ -27,7 +21,7 @@ function TransactionTable({ transactions }: TransactionTableProps) {
           <Table.Row key={transaction.id}>
             <Table.Cell>{transaction.date}</Table.Cell>
             <Table.Cell>{transaction.description}</Table.Cell>
-            <Table.Cell>${transaction.amount.toLocaleString()}</Table.Cell>
+            <Table.Cell>${formatCurrency(transaction.amount)}</Table.Cell>
           </Table.Row>
         ))}
       </Table.Body>

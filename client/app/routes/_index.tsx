@@ -1,6 +1,7 @@
 import { Box, Grid, Heading } from "@chakra-ui/react";
 import type { MetaFunction } from "@remix-run/node";
 import AccountCard from "~/components/AccountCard";
+import { accounts } from "../data/accounts";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,31 +9,6 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
-
-// Mock data for bank accounts
-const accounts = [
-  {
-    id: 1,
-    name: "Checking Account",
-    balance: 2500.75,
-    type: "checking",
-    accountNumber: "****1234",
-  },
-  {
-    id: 2,
-    name: "Savings Account",
-    balance: 15000.0,
-    type: "savings",
-    accountNumber: "****5678",
-  },
-  {
-    id: 3,
-    name: "Credit Card",
-    balance: -500.25,
-    type: "credit",
-    accountNumber: "****9876",
-  },
-];
 
 export default function Index() {
   return (
