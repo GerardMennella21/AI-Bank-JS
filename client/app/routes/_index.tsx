@@ -2,6 +2,7 @@ import { Box, Grid, Heading } from "@chakra-ui/react";
 import type { MetaFunction } from "@remix-run/node";
 import AccountCard from "~/components/AccountCard";
 import { accounts } from "../data/accounts";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,13 +19,19 @@ export default function Index() {
       </Heading>
       <Grid templateColumns="1fr" justifyItems="center" gap={6}>
         {accounts.map((account) => (
-          <AccountCard
+          <Link
             key={account.id}
-            name={account.name}
-            balance={account.balance}
-            type={account.type}
-            accountNumber={account.accountNumber}
-          />
+            to={`/accounts/${account.id}`}
+            style={{ display: "block", width: "100%", maxWidth: "56rem" }}
+          >
+            <AccountCard
+              key={account.id}
+              name={account.name}
+              balance={account.balance}
+              type={account.type}
+              accountNumber={account.accountNumber}
+            />
+          </Link>
         ))}
       </Grid>
     </Box>

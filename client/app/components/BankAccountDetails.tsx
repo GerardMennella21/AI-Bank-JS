@@ -1,5 +1,4 @@
 import { Badge, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 import { Account } from "~/data/accounts";
 import getAccountIcon from "~/util/getAccountIcon";
 

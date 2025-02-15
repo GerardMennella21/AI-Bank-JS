@@ -30,7 +30,6 @@ function AccountCard({
       flexDirection="row"
       overflow="hidden"
       width="100%"
-      maxW="4xl"
       variant="elevated"
     >
       <Card.Header>
