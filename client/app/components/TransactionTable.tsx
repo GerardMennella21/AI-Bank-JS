@@ -26,8 +26,8 @@ function TransactionTable({ transactions }: TransactionTableProps) {
   return (
     <Stack width="full" gap="5">
       <Table.Root variant="outline">
-        <Table.Header>
-          <Table.Row>
+        <Table.Header bgColor="blue.400">
+          <Table.Row fontSize="lg" fontWeight="bolder">
             <Table.ColumnHeader>Date</Table.ColumnHeader>
             <Table.ColumnHeader>Description</Table.ColumnHeader>
             <Table.ColumnHeader>Amount</Table.ColumnHeader>
