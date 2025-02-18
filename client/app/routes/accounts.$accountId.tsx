@@ -18,12 +18,14 @@ export async function loader() {
 
 function AccountDetails() {
   const insights: string = useLoaderData();
+  console.log(insights);
+  
 
   return (
     <Box p={6} bgColor="#FFFEEB">
       <BankAccountDetails account={account} />
       <TransactionTable transactions={transactions} />
-      <AiMarkdown>{insights}</AiMarkdown>
+      {/* <AiMarkdown>{insights}</AiMarkdown> */}
     </Box>
   );
 }

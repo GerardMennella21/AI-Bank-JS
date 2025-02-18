@@ -12,6 +12,7 @@ async function callAi(prompt: { developer: string; user: string }) {
         { role: "user", content: prompt.user },
       ],
       model: "gpt-4o-mini",
+      response_format: { type: "json_object" }
     });
 
     return completion.choices[0].message.content;
