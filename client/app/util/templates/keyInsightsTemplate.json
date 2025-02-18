@@ -1,0 +1,61 @@
+{
+    "spendingPatterns": {
+      "summary": "...",
+      "topCategories": [
+        {
+          "category": "...",
+          "amount": "...",
+          "percentageOfTotalSpending": "..."
+        },
+        {
+          "category": "...",
+          "amount": "...",
+          "percentageOfTotalSpending": "..."
+        }
+      ],
+        "trend": "..."
+    },
+    "incomeVsExpenses": {
+      "summary": "...",
+      "totalIncome": "...",
+      "totalExpenses": "...",
+      "netFlow": "...",
+      "netFlowSummary": "..."
+    },
+    "financialHealth": {
+      "summary": "...",
+      "savingsStatus": "...",
+      "debtStatus": "...",
+      "emergencyFundAdequacy": "..."
+    },
+    "behavioralInsights": {
+      "summary": "...",
+      "spendingStyle": "..."
+    },
+    "predictiveInsights": {
+      "summary": "...",
+      "futureProjection": "..."
+    },
+    "anomalyDetection": {
+      "summary": "...",
+      "anomalies": [
+        {
+          "transactionId": "...",
+          "date": "...",
+          "amount": "...",
+          "description": "...",
+          "reason": "..."
+        }
+      ]
+    },
+    "personalizedRecommendations": {
+      "summary": "...",
+      "recommendations": [
+        {
+          "title": "...",
+          "description": "...",
+          "actionableSteps": "..."
+        }
+      ]
+    }
+  }
