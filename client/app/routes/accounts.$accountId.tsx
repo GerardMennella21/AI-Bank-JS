@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { data, useLoaderData } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 // import AiMarkdown from "~/components/AiMarkdown";
 import BankAccountDetails from "~/components/BankAccountDetails";
 import KeyInsights from "~/components/KeyInsights";
@@ -16,11 +16,11 @@ const account = accounts[0];
 export async function loader() {
   // const prompt = keyInsightsPrompt(transactions);
   // return (await OpenAiClient.callAi(prompt)) || null;
-  return { keyInsightsExample };
+  return { insights: keyInsightsExample };
 }
 
 function AccountDetails() {
-  const { keyInsightsExample: insights } = useLoaderData();
+  const { insights } = useLoaderData();
   console.log(insights);
 
   return (
