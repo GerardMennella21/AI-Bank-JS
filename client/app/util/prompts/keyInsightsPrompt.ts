@@ -1,5 +1,5 @@
 import { Transaction } from "~/data/transactions";
-import keyInsightsTemplate from "../templates/keyInsightsTemplate.json"; // Direct import!
+import keyInsightsTemplate from "./templates/keyInsightsTemplate.json"; // Direct import!
 
 function keyInsightsPrompt(transactions: Array<Transaction>): {
   developer: string;
