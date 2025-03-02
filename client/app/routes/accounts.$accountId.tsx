@@ -7,7 +7,6 @@ import TransactionTable from "~/components/TransactionTable";
 import { accounts } from "~/data/accounts";
 import { keyInsightsExample } from "~/data/outputs";
 import { transactions } from "~/data/transactions";
-// import { OpenAiClient } from "~/util/clients";
 // import { keyInsightsPrompt } from "~/util/prompts";
 
 // Mock data for the account

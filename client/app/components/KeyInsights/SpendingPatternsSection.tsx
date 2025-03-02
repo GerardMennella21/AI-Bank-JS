@@ -30,7 +30,7 @@ function SpendingPatternsSection({
             <List.Indicator asChild color="green.500">
               <BiSolidMessageSquareCheck />
             </List.Indicator>
-            <Text as="span" fontWeight="bold">
+            <Text as="span" fontWeight="bold" paddingRight={1}>
               {category.category}:
             </Text>{" "}
             ${category.amount} ({category.percentageOfTotalSpending}% of total

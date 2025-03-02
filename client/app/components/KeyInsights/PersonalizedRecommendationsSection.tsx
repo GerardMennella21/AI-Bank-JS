@@ -33,12 +33,14 @@ function PersonalizedRecommendationsSection({
       <List.Root variant="plain" gap={2}>
         {personalizedRecommendations.recommendations.map(
           (recommendation, index) => (
-            <List.Item key={index} gap={1}>
-              <List.Indicator gap={1} asChild color="blue.500">
+            <List.Item key={index}>
+              <List.Indicator asChild color="blue.500">
                 <BiSolidBulb />
               </List.Indicator>
-              <Text fontWeight="bold">{recommendation.title}:</Text>
-              <Text>{recommendation.description}</Text>
+              <Text fontWeight="bold" paddingRight={2}>
+                {recommendation.title}:
+              </Text>
+              <Text paddingRight={2}>{recommendation.description}</Text>
               <Text fontStyle="italic">{recommendation.actionableSteps}</Text>
             </List.Item>
           )
